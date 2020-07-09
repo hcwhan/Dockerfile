@@ -12,7 +12,7 @@ RUN apk add --no-cache --update-cache --update wget && \
     rm -rf /tmp/* /var/cache/apk/*
 
 RUN mkdir -p /config && \
-    rm /mos-chinadns/config.yaml && \
+    mv /mos-chinadns/config.yaml /config/config.yaml && \
     ln -s /config/config.yaml /mos-chinadns/config.yaml
 
 CMD ["/mos-chinadns/mos-chinadns", "-dir2exe", "-c", "/mos-chinadns/config.yaml"]
