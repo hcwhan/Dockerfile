@@ -7,12 +7,8 @@ RUN apk add --no-cache --update-cache --update wget && \
     mkdir /mos-chinadns && \
     unzip "mos-chinadns-linux-amd64.zip" -d /mos-chinadns && \
     rm -rf "mos-chinadns-linux-amd64.zip" && \
-    chmod +x /mos-chinadns/mos-chinadns && ls -al && \
+    chmod +x /mos-chinadns/mos-chinadns && ls -al /mos-chinadns && \
     apk del wget && \
     rm -rf /tmp/* /var/cache/apk/*
-
-RUN mkdir -p /config && \
-    mv /mos-chinadns/config.yaml /config/config.yaml && \
-    ln -s /config/config.yaml /mos-chinadns/config.yaml
 
 CMD ["/mos-chinadns/mos-chinadns", "-dir2exe", "-c", "/mos-chinadns/config.yaml"]
