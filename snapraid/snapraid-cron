@@ -1,0 +1,1 @@
+0 4 * * * /usr/bin/python3 /app/snapraid-runner/snapraid-runner.py -c /config/snapraid-runner.conf

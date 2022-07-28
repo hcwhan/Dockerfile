@@ -7,7 +7,7 @@ RUN apk --update add python3 git smartmontools tzdata && \
     chmod +x /app/snapraid-runner/snapraid-runner.py && \
     rm -rf /var/cache/apk/*
 
-RUN echo '0 4 * * * /usr/bin/python3 /app/snapraid-runner/snapraid-runner.py -c /config/snapraid-runner.conf' > /etc/crontabs/root
+# RUN echo '0 4 * * * /usr/bin/python3 /app/snapraid-runner/snapraid-runner.py -c /config/snapraid-runner.conf' > /etc/crontabs/root
 
 VOLUME /mnt /config
 
