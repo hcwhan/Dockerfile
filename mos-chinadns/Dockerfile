@@ -1,3 +1,4 @@
+
 FROM alpine:latest
 
 RUN mkdir /mos-chinadns

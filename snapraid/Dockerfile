@@ -11,7 +11,7 @@ RUN apk --update add python3 git smartmontools tzdata && \
 
 VOLUME /mnt /config
 
-COPY /docker-entry.sh  /
+COPY ./docker-entry.sh /docker-entry.sh
 RUN chmod 755 /docker-entry.sh
 
 CMD ["/docker-entry.sh"]
